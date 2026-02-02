@@ -11,7 +11,7 @@ public class PipeManager : MonoBehaviour
     [SerializeField] private float miny;
     [SerializeField] private float maxy;
 
-    private float timer = 2;
+    private float timer = 3;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class PipeManager : MonoBehaviour
         if (timer <= 0)
         {
             CreatePipe();
-            timer = 2;
+            timer = 3;
         }
     }
 
