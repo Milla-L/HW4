@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] public float speed = 4.0f;
+    [SerializeField] private Collider2D bottomcollider;
+    [SerializeField] private Collider2D topcollider;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        if (transform.position.x < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }
